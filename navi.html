@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+    <a id="credentials" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-file-certificate"></i> Credentials</a>
+    <a id="works" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Works</a>
+
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://huongjeantruong.notion.site/A-portfolio-of-19c3c828e82243fd971769d3b23a17ee?pvs=4", '_blank').focus();
+			else if (id == "credentials")
+				window.open("https://www.notion.so/huongjeantruong/a09415688408414d802c564a44b2e89d?v=733471643f3e4535b71b4153b0a7b080&pvs=4", '_blank').focus();
+      else if (id == "works")
+				window.open("https://www.notion.so/huongjeantruong/dc8542dd47e44fad87d9b7921fd4abd8?v=9d3950340e2c484c97a99df5662f89b4&pvs=4", '_blank').focus();
+			
+
+		}
+	</script>
+
+
+</body>
+
+</html>
